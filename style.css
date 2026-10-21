@@ -160,7 +160,7 @@ h3 {
 
 .event-grid {
   display: grid;
-  gap: 2rem;
+  gap: 3rem; /* Aumentato per separare meglio gli eventi */
   grid-template-columns: 1fr;
 }
 
@@ -179,7 +179,7 @@ h3 {
 }
 
 .event-body {
-  padding: 1.25rem;
+  padding: 1.75rem; /* Aumentato da 1.25rem per dare più respiro al testo */
 }
 
 .event-body p:last-child {
