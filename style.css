@@ -7,8 +7,10 @@
   --colore-primario-scuro: #a6370c;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #202923;
-  --font-testo: Arial, Helvetica, sans-serif;
-  --font-titoli: Georgia, "Times New Roman", serif;
+  /* Font moderno e pulito per i testi lunghi */
+  --font-testo: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Font editoriale ed elegante per i titoli */
+  --font-titoli: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
 
 * {
