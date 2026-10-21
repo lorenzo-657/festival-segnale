@@ -159,7 +159,7 @@ h3 {
 .event-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .event-card {
@@ -209,4 +209,16 @@ h3 {
   top: 1rem;
 }
 
-/* Qui aggiungeremo la media query durante la demo. */
+/* Da 600px in su: due colonne */
+@media (min-width: 600px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Da 1024px in su: tre colonne */
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
