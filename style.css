@@ -224,3 +224,37 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* --- Stili per la Galleria Swiper --- */
+.mySwiper {
+  width: 100%;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #b7c0b7;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.gallery-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-figure figcaption {
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--colore-testo);
+}
+
+/* Cambia il colore delle frecce di Swiper usando la nostra variabile */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--colore-primario) !important;
+}
