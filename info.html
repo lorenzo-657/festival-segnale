@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Info e luoghi — Segnale</title>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.css">   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.css">   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,13 +21,16 @@
   </header>
 
   <main id="contenuto" class="container">
+    
+    <!-- SEZIONE INTRODUZIONE -->
     <section class="intro" aria-labelledby="titolo-info">
       <p class="eyebrow">12–13 giugno · Torino · Festival immaginario</p>
       <h1 id="titolo-info">Info e luoghi</h1>
       <p class="lead">Tutte le informazioni sulle sedi del festival e come raggiungerle.</p>
     </section>
 
-        <section class="content-section" aria-labelledby="titolo-luoghi">
+    <!-- SEZIONE GALLERIA FOTO -->
+    <section class="content-section" aria-labelledby="titolo-luoghi">
       <h2 id="titolo-luoghi">I luoghi del festival</h2>
       
       <!-- Contenitore principale Swiper -->
@@ -37,10 +40,10 @@
           <!-- Slide 1 -->
           <div class="swiper-slide">
             <figure class="gallery-figure">
-              <img src="assets/luoghi/foto1.jpg" alt="Descrizione appropriata della prima foto per l'accessibilità" width="900" height="600">
+              <img src="assets/luoghi/sede-centrale.jpg" alt="Facciata principale del Politecnico di Torino in Corso Duca degli Abruzzi" width="900" height="600">
               <figcaption>
                 <strong>Sede centrale</strong><br>
-                Il cuore del festival, dove si svolgono gli incontri principali.
+                Corso Duca degli Abruzzi 24 — Officina Nord nel festival immaginario.
               </figcaption>
             </figure>
           </div>
@@ -48,10 +51,10 @@
           <!-- Slide 2 -->
           <div class="swiper-slide">
             <figure class="gallery-figure">
-              <img src="assets/luoghi/foto2.jpg" alt="Descrizione appropriata della seconda foto per l'accessibilità" width="900" height="600">
+              <img src="assets/luoghi/politecnico-valentino.jpg" alt="Cortile interno geometrico della sede del Politecnico al Castello del Valentino" width="900" height="600">
               <figcaption>
                 <strong>Politecnico al Valentino</strong><br>
-                Spazi storici dedicati ai laboratori di sperimentazione sui materiali.
+                Viale Mattioli 39 — Spazio Forma nel festival immaginario.
               </figcaption>
             </figure>
           </div>
@@ -59,10 +62,10 @@
           <!-- Slide 3 -->
           <div class="swiper-slide">
             <figure class="gallery-figure">
-              <img src="assets/luoghi/foto3.jpg" alt="Descrizione appropriata della terza foto per l'accessibilità" width="900" height="600">
+              <img src="assets/luoghi/mirafiori.jpg" alt="Struttura architettonica moderna in vetro e acciaio del Centro Design a Mirafiori" width="900" height="600">
               <figcaption>
                 <strong>Sede di Mirafiori</strong><br>
-                Ex spazi industriali riqualificati che ospitano le mostre sul design condiviso.
+                Corso Luigi Settembrini 178 — Cortile Comune nel festival immaginario.
               </figcaption>
             </figure>
           </div>
@@ -73,15 +76,41 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
+    </section> <!-- QUESTO È IL TAG CHE MANCAVA -->
+
+
+    <!-- SEZIONE MAPPA E INDIRIZZI -->
+    <section class="content-section" aria-labelledby="titolo-mappa">
+      <h2 id="titolo-mappa">Come arrivare</h2>
+      
+      <div class="map-container">
+        <iframe id="mappa-sedi"
+          title="Mappa delle tre sedi di riferimento per il festival Segnale a Torino"
+          src="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleControl=false&amp;miniMapControl=false&amp;scrollWheelZoom=false&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=true#12/45.0465/7.6528"></iframe>
+      </div>
+      
+      <p class="map-link">
+        <a href="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleControl=false&amp;miniMapControl=false&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=true#12/45.0465/7.6528" target="_blank" rel="noopener">Visualizza la mappa a schermo intero</a>
+      </p>
+
+      <h3>Indirizzi delle sedi</h3>
+      <ul class="venues">
+        <li><strong>Sede centrale:</strong> Corso Duca degli Abruzzi 24, Torino.<br> <a href="https://www.google.com/maps/search/?api=1&query=Corso+Duca+degli+Abruzzi+24+Torino" target="_blank" rel="noopener">Ottieni indicazioni</a></li>
+        <li><strong>Politecnico al Valentino:</strong> Viale Mattioli 39, Torino.<br> <a href="https://www.google.com/maps/search/?api=1&query=Viale+Mattioli+39+Torino" target="_blank" rel="noopener">Ottieni indicazioni</a></li>
+        <li><strong>Sede di Mirafiori:</strong> Corso Luigi Settembrini 178, Torino.<br> <a href="https://www.google.com/maps/search/?api=1&query=Corso+Luigi+Settembrini+178+Torino" target="_blank" rel="noopener">Ottieni indicazioni</a></li>
+      </ul>
     </section>
-
-
-    <!-- Qui inseriremo la Mappa e gli indirizzi più avanti -->
 
   </main>
 
-  <footer class="site-footer"><div class="container"><p>Segnale · Progetto didattico · Festival immaginario</p></div></footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Segnale · Progetto didattico · Festival immaginario</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT SWIPER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.mySwiper', {
       navigation: {
@@ -89,9 +118,8 @@
         prevEl: '.swiper-button-prev',
       },
       keyboard: {
-        enabled: true, // Fondamentale per l'uso da tastiera (Accessibilità)
+        enabled: true, 
       },
-      // Non inseriamo 'autoplay' per rispettare la consegna
     });
   </script>
 
