@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Info e luoghi — Segnale</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.css">   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,12 +27,73 @@
       <p class="lead">Tutte le informazioni sulle sedi del festival e come raggiungerle.</p>
     </section>
 
-    <!-- Qui inseriremo la Galleria Swiper al prossimo passaggio -->
+        <section class="content-section" aria-labelledby="titolo-luoghi">
+      <h2 id="titolo-luoghi">I luoghi del festival</h2>
+      
+      <!-- Contenitore principale Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <figure class="gallery-figure">
+              <img src="assets/luoghi/foto1.jpg" alt="Descrizione appropriata della prima foto per l'accessibilità" width="900" height="600">
+              <figcaption>
+                <strong>Sede centrale</strong><br>
+                Il cuore del festival, dove si svolgono gli incontri principali.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <figure class="gallery-figure">
+              <img src="assets/luoghi/foto2.jpg" alt="Descrizione appropriata della seconda foto per l'accessibilità" width="900" height="600">
+              <figcaption>
+                <strong>Politecnico al Valentino</strong><br>
+                Spazi storici dedicati ai laboratori di sperimentazione sui materiali.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <figure class="gallery-figure">
+              <img src="assets/luoghi/foto3.jpg" alt="Descrizione appropriata della terza foto per l'accessibilità" width="900" height="600">
+              <figcaption>
+                <strong>Sede di Mirafiori</strong><br>
+                Ex spazi industriali riqualificati che ospitano le mostre sul design condiviso.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+        
+        <!-- Pulsanti di navigazione -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
 
     <!-- Qui inseriremo la Mappa e gli indirizzi più avanti -->
 
   </main>
 
   <footer class="site-footer"><div class="container"><p>Segnale · Progetto didattico · Festival immaginario</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      keyboard: {
+        enabled: true, // Fondamentale per l'uso da tastiera (Accessibilità)
+      },
+      // Non inseriamo 'autoplay' per rispettare la consegna
+    });
+  </script>
+
 </body>
 </html>
