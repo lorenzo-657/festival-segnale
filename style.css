@@ -3,15 +3,18 @@
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
-  --colore-primario: #d9480f;
+  --colore-primario: #d9480f; /* Mantiene le scelte colore che avevamo fatto */
   --colore-primario-scuro: #a6370c;
-  --colore-sfondo: #f5f2e9;
+  --colore-sfondo: #fffefc;
   --colore-testo: #202923;
-  /* Font moderno e pulito per i testi lunghi */
-  --font-testo: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  /* Font editoriale ed elegante per i titoli */
-  --font-titoli: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  
+  /* Testo normale in Times */
+  --font-testo: "Times New Roman", Times, serif;
+  
+  /* Titoli con Manufacturing Consent (e un font di riserva nel caso non si carichi) */
+  --font-titoli: "Manufacturing Consent", serif;
 }
+
 
 * {
   box-sizing: border-box;
