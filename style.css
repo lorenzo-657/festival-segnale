@@ -3,15 +3,15 @@
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
-  --colore-primario: #d9480f; /* Mantiene le scelte colore che avevamo fatto */
-  --colore-primario-scuro: #a6370c;
-  --colore-sfondo: #fffefc;
-  --colore-testo: #202923;
+  /* 🔴 QUI PUOI CAMBIARE IL ROSSO: cerca un HEX code su Google se lo vuoi più chiaro/scuro */
+  --colore-sfondo: #c81313; 
   
-  /* Testo normale in Times */
+  /* Testo e dettagli neri puri */
+  --colore-testo: #000000;  
+  --colore-primario: #000000; 
+  --colore-primario-scuro: #000000; 
+  
   --font-testo: "Times New Roman", Times, serif;
-  
-  /* Titoli con Manufacturing Consent (e un font di riserva nel caso non si carichi) */
   --font-titoli: "Manufacturing Consent", serif;
 }
 
@@ -60,10 +60,11 @@ a:focus-visible {
 }
 
 
+/* --- Regola per il logo in alto a sinistra (TORNATO ALLA BASE ORIGINALE) --- */
 .brand {
   display: inline-block;
   color: var(--colore-testo);
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* Dimensione originale */
   font-weight: bold;
   line-height: 1.2;
   text-decoration: none;
@@ -72,9 +73,33 @@ a:focus-visible {
 .brand span {
   display: block;
   margin-top: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Sottotitolo alla dimensione originale */
   font-weight: normal;
 }
+
+/* --- Regole per i titoli in stile Blackletter (RADDOPPIATI) --- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-titoli);
+  line-height: 1.05; /* Spazio ridotto tra le righe per compensare le dimensioni giganti */
+}
+
+h1 {
+  max-width: 100%; /* Sblocca la larghezza per evitare che le parole giganti vadano a capo male */
+  margin: 0.75rem 0 1.25rem;
+  font-size: 5rem; /* Il doppio esatto di 2.5rem (Es: "Info e luoghi") */
+}
+
+h2 {
+  font-size: 3.5rem; /* Il doppio esatto di 1.75rem (Es: "I luoghi del festival") */
+}
+
+h3 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 2.75rem; /* Il doppio esatto di 1.375rem (Es: "Sede centrale") */
+}
+
 
 nav {
   margin-top: 1rem;
@@ -99,7 +124,7 @@ nav a[aria-current="page"] {
 
 .eyebrow,
 .event-meta {
-  color: #46564b;
+  color: #ffffff;
   font-size: 0.875rem;
   font-weight: bold;
 }
@@ -180,7 +205,7 @@ h3 {
 .event-card {
   margin-bottom: 1.5rem;
   overflow: hidden;
-  border: 1px solid #b7c0b7;
+  border: 1px solid #ffffff;
   border-radius: 0.75rem;
   background: #ffffff;
 }
@@ -200,14 +225,14 @@ h3 {
 }
 
 .event-place {
-  color: #46564b;
+  color: #ffffff;
   font-size: 0.875rem;
 }
 
 .site-footer {
   padding: 1.25rem 0;
   border-top: 1px solid #b7c0b7;
-  color: #46564b;
+  color: #ffffff;
   font-size: 0.875rem;
 }
 
@@ -241,7 +266,7 @@ h3 {
 .mySwiper {
   width: 100%;
   border-radius: 0.75rem;
-  background: #ffffff;
+  background: #c81313;
   border: 1px solid #b7c0b7;
   overflow: hidden;
   margin-top: 1.5rem;
@@ -273,7 +298,7 @@ h3 {
 
 .map-container {
   margin-top: 1.5rem;
-  border: 1px solid #b7c0b7;
+  border: 1px solid #ffffff;
   border-radius: 0.75rem;
   overflow: hidden;
 }
@@ -292,4 +317,28 @@ h3 {
 
 .venues li {
   margin-bottom: 1rem;
+}
+/* --- FORZATURA TITOLI COLOSSALI --- */
+:root {
+  --font-titoli: "Manufacturing Consent", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-titoli);
+  line-height: 1; /* Ancora più stretto per gestire l'imponenza del testo */
+  overflow-wrap: break-word; /* Impedisce al testo gigante di spaccare la pagina sui telefoni */
+  hyphens: auto; /* Aggiunge i trattini per andare a capo se necessario */
+}
+
+h1 {
+  font-size: 10rem; /* Il doppio di 5rem */
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 7rem; /* Il doppio di 3.5rem */
+}
+
+h3 {
+  font-size: 5.5rem; /* Il doppio di 2.75rem */
 }
