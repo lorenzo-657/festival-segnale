@@ -51,7 +51,14 @@ a:focus-visible {
 .site-header {
   padding: 1.25rem 0;
   border-bottom: 4px solid var(--colore-primario);
+  
+  /* Regole per l'intestazione sticky */
+  position: sticky;
+  top: 0;
+  background-color: var(--colore-sfondo); /* Mantiene il colore di sfondo solido per coprire i contenuti sotto */
+  z-index: 100; /* Assicura che l'intestazione stia sopra a tutto il resto */
 }
+
 
 .brand {
   display: inline-block;
@@ -71,17 +78,20 @@ a:focus-visible {
 
 nav {
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column; /* Sotto i 600px si dispongono in colonna */
+  gap: 0.5rem; 
 }
 
 nav a {
-  display: inline-block;
-  margin-right: 1rem;
   padding: 0.25rem 0;
+  text-decoration: none;
 }
 
 nav a[aria-current="page"] {
   font-weight: bold;
 }
+
 
 .intro {
   padding: 3rem 0 1rem;
@@ -214,19 +224,18 @@ h3 {
   top: 1rem;
 }
 
-/* Da 600px in su: due colonne */
+/* Da 600px in su: due colonne per la griglia e menu a riga */
 @media (min-width: 600px) {
   .event-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-/* Da 1024px in su: tre colonne */
-@media (min-width: 1024px) {
-  .event-grid {
-    grid-template-columns: repeat(3, 1fr);
+  
+  nav {
+    flex-direction: row; /* I link tornano in orizzontale */
+    gap: 1.5rem; 
   }
 }
+
 
 /* --- Stili per la Galleria Swiper --- */
 .mySwiper {
